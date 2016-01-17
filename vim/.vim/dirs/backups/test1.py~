@@ -1,0 +1,7 @@
+varA = 'test'
+varB = 123
+
+if varA == 'test':
+    print 'yy'
+else:
+    print 'ww'

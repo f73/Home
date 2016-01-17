@@ -1,0 +1,21 @@
+syntax on
+set number
+set gfn=Tamsyn\ 12
+set t_Co=16
+set mouse=a
+
+
+:set guioptions-=m  "remove menu bar
+:set guioptions-=T  "remove toolbar
+:set guioptions-=r  "remove right-hand scroll bar
+:set guioptions-=L  "remove left-hand scroll bar
+
+nnoremap <F2> :if &go=~#'m'<Bar>set go-=m<Bar>else<Bar>set go+=m<Bar>endif<CR>
+
+"colorscheme stnight
+"colorscheme onedark
+"colorscheme vendetta
+"colorscheme flatcolor
+"colorscheme atom-dark-256
+colorscheme jellybeans
+"colorscheme PaperColor

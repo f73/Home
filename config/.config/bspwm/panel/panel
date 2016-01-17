@@ -1,0 +1,96 @@
+#! /bin/bash
+
+. panel_config
+. panel_icons
+
+#EPOCH=1
+
+if [ $(pgrep -cx panel) -gt 1 ] ; then
+	printf "%s\n" "The panel is already running." >&2
+exit 1
+fi
+
+trap 'trap - TERM; kill 0' INT TERM QUIT EXIT
+
+[ -e "$PANEL_FIFO" ] && rm "$PANEL_FIFO"
+mkfifo "$PANEL_FIFO"
+
+bspc config -m "$(bspc query -M | head -n 1)" top_padding $(expr $PANEL_HEIGHT + $top_pad)
+#bspc control --subscribe > "$PANEL_FIFO" &
+bspc subscribe > "$PANEL_FIFO" &
+xtitle -sf 'T%s' > "$PANEL_FIFO" &
+if [ $EPOCH -eq 1 ]; then
+  clock_format='%s'
+else
+  clock_format='%a %d.%m.%y %H:%M'
+fi
+clock -sf "S$clock_format" -i 10 > "$PANEL_FIFO" &
+
+
+# Volume
+while true; do
+	volume=$(amixer sget Master | sed -n "0,/.*\[\([0-9]\+\)%\].*/s//\1/p")
+	state=$(amixer sget Master | grep -Eoe '\[(on|off)\]')
+
+	if   [[ $volume -eq 0 || $state == '[off]' ]]; then
+	    token=''
+	elif [[ $volume -gt 50 ]]; then
+	    token=''
+	else
+	    token=''
+	fi
+
+echo -e V"$token $volume%"
+  sleep $REFRESH_VOLUME
+done > "$PANEL_FIFO" &
+
+# Pacman update counter
+while true; do
+  update_count=$(pacman -Qu | wc -l)
+  if [ $update_count -ne 0 ]; then
+    count='0'
+  else
+    count='update_count'
+  fi
+echo -e K'' $update_count
+  sleep 600
+done > "$PANEL_FIFO" &
+
+# vol
+#while true;
+#    do
+#        echo V''$(amixer get Master | tail -1 | sed 's/.*\[\([0-9]*%\)\].*/\1/');
+#    sleep 1;
+#done > "$PANEL_FIFO" &
+
+# weather
+while true;
+    do
+        echo B' '$(wget -q -T 1 -O- http://www.accuweather.com/en/rs/belgrade/298198/weather-forecast/298198 | awk -F\' '/acm_RecentLocationsCarousel\.push/{print $10"°C" }'| head -1)
+    sleep 1800;
+done > "$PANEL_FIFO" &
+
+
+# Player status
+#while true; do
+#  pstatus=$(playerctl status)
+#  case $pstatus in
+#    Playing)
+#      icon="$ICON_PLAY"
+#      ;;
+#    Paused)
+#      icon="$ICON_PAUSE"
+#      ;;
+#    Stopped)
+#      icon="$ICON_STOP"
+#      ;;
+#  esac
+#  echo -e "PS$(icon $icon) $(playerctl metadata artist) - $(playerctl metadata title)"
+#  sleep $REFRESH_MUSIC
+#done > "$PANEL_FIFO" &
+
+. panel_colors
+
+cat "$PANEL_FIFO" | panel_bar | lemonbar -o -2 -n "$PANEL_WM_NAME" -g "$BAR_GEOMETRY" -f "envypn:size=8" -f "$PANEL_ICON_FONT_FAMILY" -f "FontAwesome" -F "$COLOR_FOREGROUND" -B "$COLOR_BACKGROUND" -a 30 -u 4 | sh &
+
+wait

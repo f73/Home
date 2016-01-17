@@ -1,0 +1,72 @@
+#! /bin/sh
+#
+# Example panel for LemonBoy's bar
+
+. panel_colors
+. panel_icons
+
+function icon()
+{
+  echo "%{T2}$(printf $1)%{T-}"
+}
+
+num_mon=$(bspc query -M | wc -l)
+
+separator="%{F$COLOR_SEPARATOR}|%{F-}"
+
+while read -r line ; do
+	case $line in
+    PS*)
+      playing="%{A1:mpc toggle:}%{A2:urxvt -e /usr/bin/cava &:}%{A3:mpc stop:}${line#??}%{A}%{A}%{A}"
+      ;;
+
+		K*)
+			# update output
+			upd=" ${line#?}"
+			;;
+		S*)
+			# clock output
+			time=" ${line#?}"
+			;;
+		T*)
+			# xtitle output
+			title=" %{T2}%{F$COLOR_TITLE}${line#?}%{F-}%{T-}"
+			;;
+		B*)
+			# weather output
+			wea=" ${line#?}"
+			;;
+			V*)
+			# volume
+			volume="%{A3:amixer sset Master toggle:}%{A4:amixer sset Master 5%+:}%{A5:amixer sset Master 5%-:}${line#?}%{A}%{A}%{A}"
+			;;
+		W*)
+			# bspwm internal state
+			wm_infos=""
+			IFS=':'
+			set -- ${line#?}
+			while [ $# -gt 0 ] ; do
+				item=$1
+				name=${item#?}
+			name="%{A:bspc desktop -f $name:} ${name} %{A}"
+				case $item in
+			                    O*) wm_infos="${wm_infos}%{F$COLOR_UNDERLINE}  %{F-}"
+       						;;
+					    F*) wm_infos="${wm_infos}%{F$COLOR_FOCUSED_OCCUPIED_BG}  %{F-}"
+						;;
+					    U*) wm_infos="${wm_infos}%{F$COLOR_FOCUSED_MONITOR_BG}  %{F-}"
+						;;
+					    o*) wm_infos="${wm_infos}%{F$COLOR_FOCUSED_OCCUPIED_BG}  %{F-}"
+						;;
+					    f*) wm_infos="${wm_infos}%{F$COLOR_UNDERLINE}  %{F-}"
+						;;
+					    u*) wm_infos="${wm_infos}%{F$COLOR_FOCUSED_OCCUPIED_BG}  %{F-}"
+						;;
+				esac
+				shift
+			done
+			;;
+	esac
+  #echo -e "%{U$COLOR_UNDERLINE}%{l}${wm_infos} $separator ${title}%{r}${wea} $separator ${volume} $separator $(icon $ICON_CLOCK)${time} $separator ${playing} "
+  echo -e "%{U$COLOR_UNDERLINE}%{l}${wm_infos} %{c}${title}%{r}${upd} $separator${wea} $separator ${volume} $separator $(icon $ICON_CLOCK)${time}  "
+done
