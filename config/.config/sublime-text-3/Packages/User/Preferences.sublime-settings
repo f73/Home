@@ -4,6 +4,7 @@
 	"color_scheme": "Packages/Material Theme/schemes/Material-Theme-Darker.tmTheme",
 	"font_face": "gohufont",
 	"font_size": 10,
+	"translate_tabs_to_spaces": true,
 	"ignored_packages":
 	[
 		"Vintage"

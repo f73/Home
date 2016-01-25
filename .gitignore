@@ -1,3 +1,10 @@
-/vim/.vim/bundle
-/vim/.vim/dirs
-/config/.config/sublime-text-3/Packages/User/Package Control.cache
+vim/.vim/bundle
+vim/.vim/dirs
+vim/.vim/dirs/backups
+vim/.vim/dirs/tmp
+vim/.vim/dirs/tmp
+config/.config/sublime-text-3/Packages/User/Package Control.cache
+config/.config/sublime-text-3/Packages/User/.SublimeREPLHistory/python.db
+config/.config/sublime-text-3/Packages/User/Package Control.last-run
+config/.config/sublime-text-3/Cache/Default/Startup.cache
+config/.config/sublime-text-3/Local/
