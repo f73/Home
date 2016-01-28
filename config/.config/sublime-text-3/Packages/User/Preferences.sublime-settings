@@ -4,7 +4,6 @@
 	"color_scheme": "Packages/Material Theme/schemes/Material-Theme-Darker.tmTheme",
 	"font_face": "gohufont",
 	"font_size": 10,
-	"translate_tabs_to_spaces": true,
 	"ignored_packages":
 	[
 		"Vintage"
@@ -28,5 +27,6 @@
 	"material_theme_tabs_autowidth": true,
 	"material_theme_tabs_separator": true,
 	"overlay_scroll_bars": "enabled",
-	"theme": "Material-Theme-Darker.sublime-theme"
+	"theme": "Material-Theme-Darker.sublime-theme",
+	"translate_tabs_to_spaces": true
 }
