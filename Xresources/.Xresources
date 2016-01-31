@@ -12,7 +12,7 @@ Xft.rgba: rgb
 !-------------------------------------------------------------------------------
 !!! URXVT SETTINGS !!!
 !-------------------------------------------------------------------------------
-urxvt*font: xft:gohufont:pixelsize=13,xft:Inconsolata\ for\ Powerline:pixelsize=17
+urxvt*font: xft:gohufont:pixelsize=13,xft:Inconsolata\ for\ Powerline:pixelsize=13
 !Urxvt*depth: 33
 URxvt*cursorBlink: true
 URxvt*geometry: 155x40

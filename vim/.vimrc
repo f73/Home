@@ -110,7 +110,8 @@ Bundle 'plasticboy/vim-markdown'
 " Before you want to use it, please run
 " `sudo npm -g install instant-markdown-d`
 Bundle 'suan/vim-instant-markdown'
-
+"Vim-airline-themes
+Bundle 'vim-airline/vim-airline-themes'
 " ============================================================================
 " Install plugins the first time vim runs
 
