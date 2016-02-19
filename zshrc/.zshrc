@@ -25,7 +25,8 @@ alias st3='/home/ff/Downloads/st3/sublime_text'
 #Interface up/down
 alias down='sudo ip link set enp3s0 down'
 alias up='sudo ip link set enp3s0 up'
-
+#Weather
+alias weather='curl -4 wttr.in/belgrade'
 
 #Python virtual enviroments
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python2
