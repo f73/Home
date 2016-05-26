@@ -262,7 +262,6 @@ set t_Co=16
 colorscheme jellybeans
 "colorscheme PaperColor
 
-
 " when scrolling, keep cursor 3 lines away from screen border
 set scrolloff=3
 
