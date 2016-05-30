@@ -134,8 +134,11 @@ super + {minus,equal}
 super + F1
 	firefox
 
-super + Return
+super + e
 	urxvt
+
+super + q
+	thunar
 
 # Base 16 Ocean colors
 #super + d
@@ -145,7 +148,7 @@ super + Return
 #super + d
 #  	rofi -show run -font "Tamsyn 16" -lines 6 -eh 2 -width 100 -padding 450 -bw 0 -bc "#1f1f1f" -bg "#1f1f1f" -fg "#bebebe" -hlbg "#1f1f1f" -hlfg "#9575cd"
 super + d 
-	rofi -show run -font "Tamsyn 16" -lines 6 -width 100 -padding 450 -bw 0
+	rofi -show run -font "Tamsyn 16" -lines 6 -width 100 -padding 470
 
 
 
