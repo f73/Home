@@ -124,7 +124,7 @@ endif
 " ============================================================================
 " Vim settings and mappings
 " You can edit them as you wish
-
+let base16colorspace=256
 set gfn=gohufont\ 11
 set mouse=a
 let mapleader=","
@@ -243,9 +243,9 @@ nmap ,wr :RecurGrepFast <cword><CR>
 " use 256 colors when possible
 "if &term =~? 'mlterm\|xterm\|xterm-256\|screen-256'
 "	let &t_Co = 256
-"    colorscheme jellybeans
+"    colorscheme base16-twilight
 "else
-"    colorscheme jellybeans
+"    colorscheme base16-twilight
 "endif
 
 " colors for gvim
@@ -254,14 +254,19 @@ nmap ,wr :RecurGrepFast <cword><CR>
 "endif
 
 set t_Co=16
+
 "colorscheme stnight
 "colorscheme onedark
 "colorscheme vendetta
 "colorscheme flatcolor
 "colorscheme atom-dark-256
-colorscheme jellybeans
+"colorscheme jellybeans
 "colorscheme PaperColor
-
+"colorscheme jellybean
+"colorscheme bubblegum-dark
+"colorscheme soruby
+"colorscheme base16-tom
+colorscheme base16-twilight
 " when scrolling, keep cursor 3 lines away from screen border
 set scrolloff=3
 
