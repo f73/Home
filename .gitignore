@@ -13,4 +13,5 @@ config/.config/sublime-text-3/Index
 config/.config/mpd/log
 config/.config/mpd/pid
 config/.config/mpd/state
-
+config/.config/sublime-text-3/Backup/
+config/.config/sublime-text-3/Packages/Anaconda/messages/

@@ -30,45 +30,48 @@ URxvt.colorUL: #ffc107
 !!! THEME !!!
 !-------------------------------------------------------------------------------
 
-
-! Google Material Design
+! Base16 Twilight
+! Scheme: David Hart (http://hart-dev.com)
 
 ! special
-*.foreground:   #a2a2a2
+*.foreground:   #d0d0d0
 *.background:   #1f1f1f
-*.cursorColor:  #a2a2a2
+*.cursorColor:  #d0d0d0
 
 ! black
-*.color0:       #4e4e4e
-*.color8:       #777777
+*.color0:       #151515
+*.color8:       #505050
 
 ! red
-*.color1:       #a9635d
-*.color9:       #ffbbb2
+*.color1:       #ac4142
+*.color9:       #ac4142
 
 ! green
-*.color2:       #468459
-*.color10:      #9ddeaf
+*.color2:       #90a959
+*.color10:      #90a959
 
 ! yellow
-*.color3:       #84763d
-*.color11:      #e0ce91
+*.color3:       #f4bf75
+*.color11:      #f4bf75
 
 ! blue
-*.color4:       #5879af
-*.color12:      #b3d1ff
+*.color4:       #6a9fb5
+*.color12:      #6a9fb5
 
 ! magenta
-*.color5:       #9c6594
-*.color13:      #fabdf0
+*.color5:       #aa759f
+*.color13:      #aa759f
 
 ! cyan
-*.color6:       #008592
-*.color14:      #79e0ed
+*.color6:       #75b5aa
+*.color14:      #75b5aa
 
 ! white
-*.color7:       #cfcfcf
-*.color15:      #ffffff
+*.color7:       #d0d0d0
+*.color15:      #f5f5f5
+
+
+
 
 ! ------------------------------------------------------------------------------
 ! ROFI Color theme
