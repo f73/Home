@@ -153,7 +153,8 @@ super + a
 	termite
 super + shift + ctrl + x
 	shutdown -h now
-
+super + shift + ctrl + r
+    reboot
 # make sxhkd reload its configuration files:
 super + Escape
 	pkill -USR1 -x sxhkd
