@@ -95,6 +95,6 @@ URxvt.colorUL: #ffc107
 ! ------------------------------------------------------------------------------
 rofi.color-enabled: true
 rofi.color-window: #1f1f1f, #1f1f1f, argb:0000000
-rofi.color-normal: #1f1f1f, #ffffff, argb:0eee8d5, #1d1d1d, #eee8d5
+rofi.color-normal: #1f1f1f, #ffffff, argb:0000000, #504e4e, #eee8d5
 rofi.color-active: #fdf6e3, #dc322f, #eee8d5, #dc322f, #fdf6e3
 rofi.color-urgent: argb:0fdf6e3, #dc322f, argb:0eee8d5, argb:0dc322f, #fdf6e3
