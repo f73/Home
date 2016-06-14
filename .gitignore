@@ -15,3 +15,12 @@ config/.config/mpd/pid
 config/.config/mpd/state
 config/.config/sublime-text-3/Backup/
 config/.config/sublime-text-3/Packages/Anaconda/messages/
+Xresources/.Xresources (copy 1)
+config/.config/sublime-text-3/Packages/Anaconda/.travis.yml
+config/.config/sublime-text-3/Packages/Anaconda/setup.py
+config/.config/sublime-text-3/Packages/Anaconda/test/
+config/.config/sublime-text-3/Packages/Anaconda/tox.ini
+config/.config/sublime-text-3/Packages/User/Anaconda.sublime-settings
+config/.config/sublime-text-3/Packages/User/PythonTestRunner.last-run
+vim/.vim/.netrwhist
+
