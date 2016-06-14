@@ -479,7 +479,8 @@ let g:choosewin_overlay_enable = 1
 " Airline ------------------------------
 
 let g:airline_powerline_fonts = 1
-let g:airline_theme = 'bubblegum'
+"let g:airline_theme = 'bubblegum'
+let g:airline_theme = 'base16'
 let g:airline#extensions#whitespace#enabled = 1
 
 " to use fancy symbols for airline, uncomment the following lines and use a
