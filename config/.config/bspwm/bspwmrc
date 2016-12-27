@@ -37,4 +37,5 @@ fi
 panel &
 compton -b &
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
-nitrogen --restore &
+#nitrogen --restore &
+sh ~/.fehbg &
