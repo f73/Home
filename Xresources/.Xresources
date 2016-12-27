@@ -20,7 +20,6 @@ URxvt*geometry: 155x40
 URxvt*borderLess: false
 URxvt*scrollBar: false
 URxvt*cursorUnderline: false
-URxvt*scrollColor: #8bc34a
 URxvt.underlineURLs: true
 !URxvt.letterSpace: 1
 URxvt.iconFile: /usr/share/icons/Menda-Circle/apps/48x48/apps/terminator.svg
