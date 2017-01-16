@@ -91,6 +91,6 @@ done > "$PANEL_FIFO" &
 
 . panel_colors
 
-cat "$PANEL_FIFO" | panel_bar | lemonbar -o -2 -n "$PANEL_WM_NAME" -g "$BAR_GEOMETRY" -f "envypn:size=8" -f "$PANEL_ICON_FONT_FAMILY" -f "FontAwesome" -F "$COLOR_FOREGROUND" -B "$COLOR_BACKGROUND" -a 30 -u 4 | sh &
+cat "$PANEL_FIFO" | panel_bar | lemonbar -o -2 -n "$PANEL_WM_NAME" -g "$BAR_GEOMETRY" -f "ypn envypn:size=8" -f "$PANEL_ICON_FONT_FAMILY" -f "FontAwesome" -F "$COLOR_FOREGROUND" -B "$COLOR_BACKGROUND" -a 30 -u 4 | sh &
 
 wait

@@ -2,8 +2,8 @@
 	"always_show_minimap_viewport": false,
 	"bold_folder_labels": true,
 	"color_scheme": "Packages/Material Theme/schemes/Material-Theme-Darker.tmTheme",
-	"font_face": "gohufont",
-	"font_size": 10,
+	"font_face": "Gohu GohuFont",
+	"font_size": 11,
 	"ignored_packages":
 	[
 		"Vintage"
