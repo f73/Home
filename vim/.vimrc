@@ -125,7 +125,7 @@ endif
 " Vim settings and mappings
 " You can edit them as you wish
 let base16colorspace=256
-set gfn=gohufont\ 11
+set gfn=Gohu\ GohuFont\ 11
 set mouse=a
 let mapleader=","
 :set guioptions-=m  "remove menu bar
