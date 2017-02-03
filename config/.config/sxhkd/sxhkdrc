@@ -150,7 +150,7 @@ super + q
 super + d 
 	rofi -show run -font "Misc Tamsyn 16" -lines 6 -width 100 -padding 470
 super + a
-	termite
+    oblogout	
 super + shift + ctrl + x
 	shutdown -h now
 super + shift + ctrl + r

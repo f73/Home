@@ -6,6 +6,7 @@
 	"installed_packages":
 	[
 		"Anaconda",
+		"Emmet",
 		"Material Theme",
 		"Package Control",
 		"SublimeREPL"
