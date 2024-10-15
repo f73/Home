@@ -8,6 +8,6 @@ services:
       - PGID=1000 #optional
       - TZ=Europe/Germany
       - SUBDOMAINS=blh
-      - TOKEN=xxxxxxxxx
+      - TOKEN=xxxxxxxxxyy
       - LOG_FILE=false #optional
     restart: unless-stopped
